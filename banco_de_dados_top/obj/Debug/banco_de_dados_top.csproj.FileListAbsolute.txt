@@ -1,0 +1,24 @@
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.exe.config
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.exe
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.pdb
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.csprojResolveAssemblyReference.cache
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.MainForm.resources
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.csproj.GenerateResource.Cache
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.exe
+C:\Users\José Roberto\Documents\SharpDevelop Projects\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.pdb
+D:\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.exe.config
+D:\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.exe
+D:\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.pdb
+D:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.csprojResolveAssemblyReference.cache
+D:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.MainForm.resources
+D:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.csproj.GenerateResource.Cache
+D:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.exe
+D:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.pdb
+E:\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.exe.config
+E:\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.exe
+E:\banco_de_dados_top\banco_de_dados_top\bin\Debug\banco_de_dados_top.pdb
+E:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.csprojResolveAssemblyReference.cache
+E:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.MainForm.resources
+E:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.csproj.GenerateResource.Cache
+E:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.exe
+E:\banco_de_dados_top\banco_de_dados_top\obj\Debug\banco_de_dados_top.pdb
