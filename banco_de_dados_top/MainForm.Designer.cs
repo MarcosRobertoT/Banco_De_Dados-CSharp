@@ -31,6 +31,9 @@ namespace banco_de_dados_top
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Button button7;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -71,6 +74,9 @@ namespace banco_de_dados_top
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.button6 = new System.Windows.Forms.Button();
+			this.label6 = new System.Windows.Forms.Label();
+			this.button7 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// richTextBox1
@@ -188,7 +194,7 @@ namespace banco_de_dados_top
 			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button5.Location = new System.Drawing.Point(20, 275);
 			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(80, 49);
+			this.button5.Size = new System.Drawing.Size(73, 49);
 			this.button5.TabIndex = 17;
 			this.button5.UseVisualStyleBackColor = false;
 			this.button5.Click += new System.EventHandler(this.Button5Click);
@@ -224,29 +230,75 @@ namespace banco_de_dados_top
 			// 
 			this.textBox2.Location = new System.Drawing.Point(78, 69);
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(177, 20);
+			this.textBox2.Size = new System.Drawing.Size(216, 20);
 			this.textBox2.TabIndex = 7;
 			// 
 			// textBox3
 			// 
 			this.textBox3.Location = new System.Drawing.Point(78, 114);
 			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(177, 20);
+			this.textBox3.Size = new System.Drawing.Size(216, 20);
 			this.textBox3.TabIndex = 8;
 			// 
 			// textBox4
 			// 
 			this.textBox4.Location = new System.Drawing.Point(78, 156);
 			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(98, 20);
+			this.textBox4.Size = new System.Drawing.Size(108, 20);
 			this.textBox4.TabIndex = 9;
+			// 
+			// button6
+			// 
+			this.button6.BackColor = System.Drawing.Color.Transparent;
+			this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+			this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button6.FlatAppearance.BorderSize = 0;
+			this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+			this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button6.Location = new System.Drawing.Point(300, 69);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(40, 20);
+			this.button6.TabIndex = 18;
+			this.button6.UseVisualStyleBackColor = false;
+			this.button6.Click += new System.EventHandler(this.Button6Click);
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(193, 274);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(61, 13);
+			this.label6.TabIndex = 19;
+			this.label6.Text = "Nº Registro";
+			// 
+			// button7
+			// 
+			this.button7.BackColor = System.Drawing.Color.Transparent;
+			this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+			this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button7.FlatAppearance.BorderSize = 0;
+			this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+			this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button7.Location = new System.Drawing.Point(223, 145);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(58, 49);
+			this.button7.TabIndex = 20;
+			this.button7.UseVisualStyleBackColor = false;
+			this.button7.Click += new System.EventHandler(this.Button7Click);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.ClientSize = new System.Drawing.Size(372, 384);
+			this.ClientSize = new System.Drawing.Size(386, 384);
+			this.Controls.Add(this.button7);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.button6);
 			this.Controls.Add(this.textBox4);
 			this.Controls.Add(this.textBox3);
 			this.Controls.Add(this.textBox2);
@@ -265,7 +317,7 @@ namespace banco_de_dados_top
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.richTextBox1);
 			this.Name = "MainForm";
-			this.Text = "Banco de Dados Pika";
+			this.Text = "Banco de Dados dos Funcionários";
 			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();

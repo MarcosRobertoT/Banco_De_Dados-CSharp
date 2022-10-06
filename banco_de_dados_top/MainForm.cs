@@ -29,6 +29,31 @@ namespace banco_de_dados_top
 			textBox5.Clear();
 			label1.Text = richTextBox1.Lines.Length.ToString();
 		}
+		void Button4Click(object sender, EventArgs e)
+		{
+			try	
+			{
+				int numLinha = int.Parse(textBox5.Text);
+				string linha = richTextBox1.Lines[numLinha];
+				string[] dados = linha.Split('\t');
+				if (int.Parse(textBox5.Text) < richTextBox1.Lines.Length && dados[3] == "A")
+				{
+					textBox2.Text = dados[0];
+					textBox3.Text = dados[1];
+					textBox4.Text = dados[2];
+					label1.Text = textBox5.Text;
+				}
+				else
+				{
+					MessageBox.Show("Arquivo não encontrado");
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Arquivo não encontrado");
+			}
+			//Buscar a linha
+		}
 		void Button1Click(object sender, EventArgs e)
 		{
 			//Salva um arquivo
@@ -43,7 +68,7 @@ namespace banco_de_dados_top
 		}
 		void Button3Click(object sender, EventArgs e)
 		{
-			string linhaNova = textBox2.Text + "|" + textBox3.Text + "|" + textBox4.Text;
+			string linhaNova = textBox2.Text + "\t" + textBox3.Text + "\t" + textBox4.Text + "\t" + "A";
 			
 			if (textBox2.Text == ""  || textBox3.Text == "" || textBox4.Text == "")
 			{
@@ -70,27 +95,6 @@ namespace banco_de_dados_top
 			Limpar();
 			label1.Text = richTextBox1.Lines.Length.ToString();
 		}
-		void Button4Click(object sender, EventArgs e)
-		{
-			string linha;
-			string[] dados;
-			int numLinha;
-			//Buscar a linha
-			try
-			{
-				numLinha = int.Parse(textBox5.Text);
-				linha = richTextBox1.Lines[numLinha];
-				dados = linha.Split('|');
-				textBox2.Text = dados[0];
-				textBox3.Text = dados[1];
-				textBox4.Text = dados[2];
-				label1.Text = textBox5.Text;
-			}
-			catch
-			{
-				MessageBox.Show("Arquivo não existe/inválido.");
-			}
-		}
 		void MainFormLoad(object sender, EventArgs e)
 		{
 			try
@@ -108,6 +112,46 @@ namespace banco_de_dados_top
 		void Button5Click(object sender, EventArgs e)
 		{
 			Limpar();
+		}
+		void Button6Click(object sender, EventArgs e)
+		{
+			bool achou = false;
+			for (int i = 1; i < richTextBox1.Lines.Length; i++)
+			{
+				string[] dados =richTextBox1.Lines[i].Split('\t');
+				if (dados[0] == textBox2.Text && dados[3] == "A")
+				{
+					label1.Text = i.ToString();
+					textBox2.Text = dados[0];
+					textBox3.Text = dados[1];
+					textBox4.Text = dados[2];
+					achou = true;
+				}
+			}
+			if (achou == false)
+			{
+				MessageBox.Show("Arquivo não encontrado");
+			}
+		}
+		void Button7Click(object sender, EventArgs e)
+		{
+			
+			if (int.Parse(label1.Text) != richTextBox1.Lines.Length && textBox2.Text != "" && textBox4.Text != "" && textBox4.Text != "" && textBox5.Text != "")
+			{
+				if (DialogResult.Yes == MessageBox.Show("Tem certeza que quer apagar esse registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+				{
+					string linhaNova = textBox2.Text + "\t" + textBox3.Text + "\t" + textBox4.Text + "\t" + "E";
+					string linhaVelha = richTextBox1.Lines[int.Parse(label1.Text)];
+					richTextBox1.Text = richTextBox1.Text.Replace(linhaVelha, linhaNova);
+					Limpar();
+	//				richTextBox1.SaveFile("lista", RichTextBoxStreamType.PlainText);
+	//				MessageBox.Show("Arquivo excluido com sucesso");
+				}
+			}
+			else
+			{
+				MessageBox.Show("Complete os campos");
+			}
 		}
 	}
 }
