@@ -52,6 +52,7 @@ namespace banco_de_dados_top
 			{
 				MessageBox.Show("Arquivo não encontrado");
 			}
+			textBox5.Clear();
 			//Buscar a linha
 		}
 		void Button1Click(object sender, EventArgs e)
@@ -128,29 +129,60 @@ namespace banco_de_dados_top
 					achou = true;
 				}
 			}
-			if (achou == false)
+			if (!achou)
 			{
 				MessageBox.Show("Arquivo não encontrado");
 			}
 		}
 		void Button7Click(object sender, EventArgs e)
 		{
-			
-			if (int.Parse(label1.Text) != richTextBox1.Lines.Length && textBox2.Text != "" && textBox4.Text != "" && textBox4.Text != "" && textBox5.Text != "")
+			int numLinha;
+			if (textBox5.Text != "")
 			{
-				if (DialogResult.Yes == MessageBox.Show("Tem certeza que quer apagar esse registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+					if (!int.TryParse(textBox5.Text, out numLinha))
+					{
+						MessageBox.Show("Arquivo não encontrado");
+						Limpar();
+						return;
+					}
+					string linha = richTextBox1.Lines[numLinha];
+					string[] dados = linha.Split('\t');
+					if (numLinha < richTextBox1.Lines.Length && dados[3] == "A")
+					{
+						textBox2.Text = dados[0];
+						textBox3.Text = dados[1];
+						textBox4.Text = dados[2];
+						label1.Text = textBox5.Text;
+					}
+			}
+			if (int.Parse(label1.Text) != richTextBox1.Lines.Length && textBox2.Text != "" && textBox4.Text != "" && textBox4.Text != "")
+			{
+				numLinha = int.Parse(label1.Text);
+				string linha = richTextBox1.Lines[numLinha];
+				string[] dados = linha.Split('\t');
+				if (numLinha < richTextBox1.Lines.Length && dados[3] == "A")
+				{
+					textBox2.Text = dados[0];
+					textBox3.Text = dados[1];
+					textBox4.Text = dados[2];
+				}
+				else
+				{
+					return;
+				}
+				if (DialogResult.Yes == MessageBox.Show("Tem certeza que quer apagar este registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
 				{
 					string linhaNova = textBox2.Text + "\t" + textBox3.Text + "\t" + textBox4.Text + "\t" + "E";
-					string linhaVelha = richTextBox1.Lines[int.Parse(label1.Text)];
+					string linhaVelha = richTextBox1.Lines[numLinha];
 					richTextBox1.Text = richTextBox1.Text.Replace(linhaVelha, linhaNova);
 					Limpar();
-	//				richTextBox1.SaveFile("lista", RichTextBoxStreamType.PlainText);
-	//				MessageBox.Show("Arquivo excluido com sucesso");
+					richTextBox1.SaveFile("lista", RichTextBoxStreamType.PlainText);
+					MessageBox.Show("Arquivo excluido com sucesso");
 				}
 			}
 			else
 			{
-				MessageBox.Show("Complete os campos");
+				MessageBox.Show("Não encontrado");
 			}
 		}
 	}

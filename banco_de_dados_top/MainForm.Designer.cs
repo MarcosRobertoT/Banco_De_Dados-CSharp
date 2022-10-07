@@ -295,7 +295,7 @@ namespace banco_de_dados_top
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.ClientSize = new System.Drawing.Size(386, 384);
+			this.ClientSize = new System.Drawing.Size(385, 384);
 			this.Controls.Add(this.button7);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.button6);
